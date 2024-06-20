@@ -1,29 +1,20 @@
-pat2pdf
-=======
+# pat2pdf
 
-This script connects to the [USPTO](http://patft.uspto.gov/) patent database, retrieves the TIFF images of patents or patent applications and converts them into a single PDF file using libtiff.
+This script connects to the [USPTO](https://ppubs.uspto.gov/pubwebapp/static/pages/ppubsbasic.html) patent database and downloads the PDF.
 
-Yes, I know, you would have written it in perl/python/(insert your favourite scripting language here), but it is written in bash and works well.
+# History
 
-It requires an http fetcher (lynx by default), tiffcp and tiff2pdf (both part of libtiff).
+This script was originally a complicated method that fetched individual TIFF files, written by Oren Tirosh and Thomas Boege, and Paul William. Nowadays the PDF can be found directly on the USPTO site, so all the cool fancy scripting is no longer needed. David Lowenfels simplified it to grab the file directly.
 
-History
-======
-
-This script was originally written by Oren Tirosh and Thomas Boege. In 2013 the script broke due to changes to the USTPO website. Paul William fixed the script and uploaded it to GitHub because its [original homepage](http://www.tothink.com/pat2pdf) was no longer online.
-
-Compatibility
-=====
+# Compatibility
 
 This scirpt should work on any Unix-like system (Linux, Mac OS X etc.) with the required command line tools and libraries installed.
 
-Usage
-====
+# Usage
 
 > pat2pdf &lt;Patent Number or Application Number&gt;
 
-Examples
-===
+# Examples
 
 Fetching a USTPO patent application:
 
@@ -33,9 +24,8 @@ Fetching a USTPO patent:
 
 > pat2pdf 8259522
 
-Result is a file in the current directory named pat<patnum>.pdf
+Result is a file in the current directory named pat&lt;patnum&gt;.pdf
 
-License
-======
+# License
 
 This script is licensed under the GPL (version unspecified).
